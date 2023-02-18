@@ -1,0 +1,356 @@
+/* ---------- ----------HTML Setting---------- ---------- */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1;
+  font-family: Montserrat;
+  color: #21243d;
+  background-color: #f3f3f3;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- ----------container---------- ---------- */
+[class*=_container] {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1199.98px) {
+  [class*=_container] {
+    max-width: 970px;
+  }
+}
+@media (max-width: 991.98px) {
+  [class*=_container] {
+    max-width: 750px;
+  }
+}
+@media (max-width: 767.98px) {
+  [class*=_container] {
+    max-width: none;
+    padding: 0px 15px;
+  }
+}
+.center__info_box img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.center__info {
+  margin-top: 200px;
+  margin-bottom: 200px;
+}
+
+.about__founder_box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 410px;
+}
+
+.founder__box_item {
+  height: 100%;
+  background-color: #f8f9fa;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 7px #000;
+}
+
+.center__info_box {
+  flex: 0 1 70%;
+  display: flex;
+  align-items: center;
+}
+
+.bio__box {
+  margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.bio__text {
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.course__form {
+  width: 100%;
+}
+
+.course__form button {
+  width: max-content;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0);
+  text-transform: uppercase;
+  text-align: left;
+  padding: 0 10px;
+  border-radius: 10px;
+  box-shadow: 3px 5px 10px #000;
+  position: relative;
+  top: 0;
+  left: 0;
+  bottom: 3px;
+}
+
+.course__form button:hover {
+  transition: all 0.3s;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  box-shadow: 1px 3px 5px #000;
+}
+
+.about__founder {
+  flex: 0 1 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.skils__box {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+
+.skils__box_item::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #212529;
+  border-radius: 7px;
+}
+
+.skils__box_item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #000;
+  font-size: 1.4rem;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.footer {
+  flex: 0 1 70px;
+  background-color: #000;
+  padding: 30px 0;
+}
+
+.block__container {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.block__item {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 24px;
+  color: #fff;
+}
+
+.first {
+  flex: 1 1 33.333%;
+}
+
+#copy {
+  margin: 10px 0 0 0;
+}
+
+.lower__title {
+  color: #df9679;
+  font-size: 1.5rem;
+}
+
+.second__text_ontainer {
+  margin: 20px 0 0 0;
+}
+
+.link {
+  width: max-content;
+  display: block;
+  color: #fff;
+}
+
+.second {
+  flex: 1 1 33.333%;
+}
+
+.columns {
+  display: flex;
+  align-items: flex-start;
+}
+
+.first__block {
+  display: none;
+}
+
+@media screen and (min-width: 985px) {
+  .first__block {
+    display: block;
+  }
+}
+.columns__item {
+  flex: 1 1 50%;
+}
+
+.title__low {
+  font-size: 0.9rem;
+}
+
+.quick_novigator {
+  margin: 20px 0 0 0;
+}
+
+.novigator__item {
+  font-size: 0.5rem;
+  line-height: 20px;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.massanger__container {
+  margin: 20px 0 0 0;
+  display: flex;
+  gap: 10px;
+}
+
+.third {
+  display: none;
+}
+
+.form__container {
+  display: flex;
+  align-items: center;
+}
+
+.input__item {
+  width: 240px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px 5px 5px 12px;
+  background-color: rgba(255, 255, 255, 0);
+  color: #fff;
+}
+
+.email:focus {
+  box-shadow: 0 0 5px #fff;
+  border: none;
+}
+
+.form__container > button {
+  width: 136px;
+  height: 50px;
+  border-radius: 5px 12px 12px 5px;
+  background-color: #ffd2a4;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.white {
+  width: 90%;
+  height: 60px;
+  overflow: hidden;
+  line-height: 27px;
+}
+
+@media screen and (min-width: 760px) {
+  .block__container {
+    flex-direction: row;
+  }
+  .first {
+    flex: 1 1 40%;
+  }
+  .second {
+    flex: 1 1 20%;
+  }
+  .third {
+    flex: 1 1 40%;
+    justify-content: flex-end;
+  }
+  .input__item {
+    width: 300px;
+  }
+  form > button {
+    width: 170px;
+  }
+  .second__block {
+    padding-left: 20px;
+  }
+}
+@media screen and (min-width: 425px) {
+  .third {
+    flex: 1 1 33.333%;
+    display: flex;
+    align-items: center;
+  }
+  .limit__container {
+    width: 90%;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .limit__container > .white {
+    color: #fff;
+  }
+}
+
+/*# sourceMappingURL=indexStyle.css.map */
