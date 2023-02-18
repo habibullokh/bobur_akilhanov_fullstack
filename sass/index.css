@@ -1,0 +1,180 @@
+/* ---------- ----------HTML Setting---------- ---------- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1;
+  font-family: Montserrat;
+  color: #21243d;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- ----------container---------- ---------- */
+[class*=_container] {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1199.98px) {
+  [class*=_container] {
+    max-width: 970px;
+  }
+}
+@media (max-width: 991.98px) {
+  [class*=_container] {
+    max-width: 750px;
+  }
+}
+@media (max-width: 767.98px) {
+  [class*=_container] {
+    max-width: none;
+    padding: 0px 15px;
+  }
+}
+/* ---------- ----------header---------- ---------- */
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  background-color: #cdcdcd;
+}
+
+.header_container {
+  min-height: 103px;
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+
+@media (max-width: 767.98px) {
+  .header_container {
+    min-height: 0;
+    flex-direction: column;
+  }
+}
+/* ---------- ----------page---------- ---------- */
+.page {
+  flex: 1 1 auto;
+}
+
+/* ---------- ----------menu---------- ---------- */
+.menu_list {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 70px;
+  row-gap: 15px;
+  flex-wrap: wrap;
+}
+
+.menu_link {
+  font-weight: 500;
+  font-size: 20px;
+  transition: all 0.3s ease 0s;
+  color: inherit;
+}
+
+.menu_link:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: rgba(74, 74, 173, 0.852);
+}
+
+@media (max-width: 767.98px) {
+  .menu_list {
+    justify-content: center;
+  }
+  .menu_link {
+    font-size: 18px;
+  }
+}
+/* ---------- ----------info_about_course---------- ---------- */
+.info_container {
+  position: relative;
+  padding: 183px 0 183px 0px;
+  flex-wrap: wrap;
+}
+
+.info_cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 10px;
+  row-gap: 10px;
+}
+
+.card {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #cdcdcd;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 767.98px) {
+  .info_cards {
+    display: block;
+  }
+  .card {
+    margin: 10px;
+  }
+}
+.title_ctn {
+  display: flex;
+  column-gap: 10px;
+  row-gap: 10px;
+  align-items: center;
+  padding-bottom: 25px;
+}
+
+.text {
+  font-size: 18px;
+  line-height: 24px;
+  color: #000;
+  font-weight: 700;
+}
+
+.card_info {
+  font-size: 24px;
+  line-height: 24px;
+}
+
+/*# sourceMappingURL=index.css.map */

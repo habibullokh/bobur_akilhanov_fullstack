@@ -1,0 +1,79 @@
+.page_ctn {
+  background-color: #cdcdcd;
+  padding: 10px;
+  border-radius: 5px;
+}
+.page_container {
+}
+.page_title {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10px;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.title_page {
+  font-size: 24px;
+}
+.python_text_inf {
+  font-size: 22px;
+  line-height: 30px;
+}
+.inf_about_teacher {
+  padding: 100px 0 0 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 10px;
+  row-gap: 10px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 979.68px) {
+  .python_text_inf {
+    font-size: 18px;
+  }
+  .page_ctn {
+    padding: 10px;
+  }
+  .inf_about_teacher {
+    display: block;
+  }
+}
+
+@media (max-width: 767.68px) {
+  .page_ctn {
+    margin: 10px;
+  }
+}
+
+.teacher_name {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 5;
+}
+.teacher_about_inf {
+  background-color: #cdcdcd;
+  padding: 10px;
+}
+.inf_teacher {
+  font-size: 15px;
+  font-weight: 500;
+}
+.teacher_img {
+}
+.tacher {
+  width: 100%;
+  height: 100%;
+  object-fit: none;
+}
+@media (max-width: 767.68px) {
+  .teacher_name {
+    text-align: center;
+    margin: 0 0 0 0;
+  }
+  .teacher_about_inf {
+    margin: 10px;
+  }
+}
