@@ -4,6 +4,7 @@ from .models import Group, Student, Mark, CenterInfo
 
 
 def index(request):
+    academy = CenterInfo.objects.all()
     if request.method == 'POST':
         name = request.POST.get('name')
         last_name = request.POST.get('last_name')
@@ -13,7 +14,7 @@ def index(request):
     edu_groups = Group.objects.all()
     edu_students = Student.objects.all()
 
-    contex = {'groups': edu_groups, 'students': edu_students}
+    contex = {'groups': edu_groups, 'students': edu_students, 'academy': academy}
 
     return render(request, 'index.html', context=contex)
 
@@ -59,9 +60,8 @@ def centerinfo(request):
     return render(request, 'centerinfo.html', context=context)
 
 def academy(request):
-    academy = Academy.objects.all()
-    
-    context = {'academy': academy}
+ 
+    print(context)
     
     return render(request, 'index.html', context=context)
 

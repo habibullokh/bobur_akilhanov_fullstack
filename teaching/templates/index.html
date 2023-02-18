@@ -1,23 +1,124 @@
-<html>
-<div style="border:1px solid black; height:600px; width:400px; margin:50px;">
-        <form action="{% url 'index' %}" method="POST">
-            {% csrf_token %}
-            <input type="text" name="name" placeholder="Enter name" style="width:350; height:50; margin:20">
-            <input type="text" name="last_name" placeholder="Enter last name" style="width:350; height:50; margin:20;">
-            <input type="text" name="phone_number" placeholder="Enter phone number" style="width:350; height:50; margin:20;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	{% load static %}
+	<link rel="stylesheet" href="{%static '../../scss/indexStyle.css' %}">
+	<title>Document</title>   
+</head>
+<body>
+	<div class="wrapper">
+		<!-- header -->
+		<section action="{% url 'centerinfo' %} method="POST"" class="center__info info_container " >	
+			<div class="about__founder_box">
+				<div class="center__info_box founder__box_item">
+					<img src="../../images/author.png" alt="author" class="co-fonder founder__item">
+					<div class="bio__box founder__item">
+						{% for i in academy %}
+							<div class="title">{{i.academy.name}}</div>
+						{% endfor %}
+						{% for i in academy %}
+							<div class="bio__text ">{{  i.bio}}</div>
+						{% endfor %}
+						<form action="{% url 'centerinfo' %}" method="POST" class="course__form">
+							<button type="submit">information about cources</button>
+						</form>
+					</div>
+				</div>
+				<div class="about__founder founder__box_item">
+					<h3 class="title">Skills</h3>
+					
+					<ul class="skils__box">
+						<li class="skils__box_item">full stack</li>
+						<li class="skils__box_item">Python</li>
+						<li class="skils__box_item">JS</li>
+						<li class="skils__box_item">7 years of experience</li>
+						<li class="skils__box_item">Co-founder of BA Academy</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<div class="footer">
+			<div class="container">
+				<div class="block__container">
+					<div class="block__item first">
+						<div class="first__text_ontainer">
+							<div class="lower__title">
+								{finsweet
+							</div>
+							<div id="copy" class="title__low">
+								&copy;COPYRIGHT FINSWEET 2022
+							</div>
+						</div>
+						<div class="second__text_ontainer">
+							<a href="callto:(480)555-0103" class="link">(480)555-0103</a>
+							<a href="emailto:finsweet@example.com" class="link">finsweet@example.com</a>
+							<a class="link">4517 Washington Ave.</a>
+						</div>
+					</div>
+					<div class="block__item second">
+						<div class="columns">
+							<div class="columns__item first__block">
+								<div class="title__low">
+									Quicklinks
+								</div>
+								<ul class="quick_novigator">
+									<li class="novigator__item">About us</li>
+									<li class="novigator__item">sermons</li>
+									<li class="novigator__item">events</li>
+									<li class="novigator__item">blog</li>
+								</ul>
+							</div>
+							<div class="columns__item second__block">
+								<div class="title__low">
+									connect
+								</div>
+								<ul class="massanger__container">
+									<a class="massanger__link" href="#"><img src="images/Vector.svg"></a>
+									<a class="massanger__link" href="#"><img src="images/Vector_2.svg"></a>
+									<a class="massanger__link" href="#"><img src="images/Vector_3.svg"></a>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="block__item third">
+						<div class="limit__container">
+							<div class="lower__title white">
+								Subscribe to get Latest Updates
+							</div>
+							<form action="#">
+								<div class="form__container">
+									<input type="email" class="input__item email" placeholder="Yourmail@gmail.com">
+									<button type="submit">Subscribe</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		
+		<script>
+			const placeholder = document.querySelector(".email")
+			const doc = document.documentElement
+			const attr = placeholder.getAttribute("placeholder")
+			placeholder.addEventListener("focus", function (event) {
+				event.target.removeAttribute("placeholder")
+			})
 
-            <select name="group_id" style="width:350px; height:50px; margin:20;">
-                {% for group in groups %}
-                    <option value="{{ group.id }}">{{ group.name }}</option>
-                {% endfor %}
-            </select>
-            <button type="submit" style="margin-left:100px; margin-top:50px; ">Create</button>
-            <button type="button" style="margin-left:100px; margin-top:50px; ">DELETE</button>
-        </form>
-        <ul>
-            {% for student in students %}
-                <li>{{ student.id }}. {{ student.last_name }} {{ student.name }}</li>
-            {% endfor %}
-        </ul>
-    </div>
+			placeholder.addEventListener("blur", function (event) {
+				event.target.setAttribute("placeholder", attr)
+			})
+
+			doc.addEventListener("keypress", function (event) {
+				event.key === "w" && window.scrollBy(0, -100)
+				event.key === "s" && window.scrollBy(0, 100)
+			})
+		</script>
+		</div>
+	</div>
+</body>
 </html>
