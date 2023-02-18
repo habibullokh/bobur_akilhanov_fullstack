@@ -1,0 +1,9 @@
+<html>
+<div style="border:1px solid black; height:600px; width:400px; margin:50px;">
+        <form action="{% url 'centerinfo' %}" method="POST">{% csrf_token %}
+          {% for centerinfos in centerinfo %}
+            <h1 value="{{ group.id }}">{{ group.name }}</h1>
+          {% endfor %}           
+        </form>
+    </div>
+</html>
