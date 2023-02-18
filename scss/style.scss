@@ -284,7 +284,6 @@ body {
 	gap: 10px;
 }
 
-.massanger__link {}
 
 .third {
 	display: none;
@@ -360,11 +359,10 @@ body {
 	.third {
 		flex: 1 1 33.333%;
 		display: flex;
-		align-items: center;
+		align-items: flex-start;
 	}
 
 	.limit__container {
-		width: 90%;
 		height: 140px;
 		display: flex;
 		flex-direction: column;
@@ -374,4 +372,130 @@ body {
 	.limit__container>.white {
 		color: #fff;
 	}
+}
+
+
+.registration {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	background-color: #fff;
+	color: #000;
+	padding: 20px 0;
+	border-radius: 10px;
+	margin-top: 60px;
+	margin-bottom: 60px;
+}
+
+.registration>form{
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+
+.register__title {
+	font-size: 2rem;
+	// line-height: 2;
+	font-weight: 700;
+}
+
+.register__box {
+	height: 50px;
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+
+.register__item {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	height: 40px;
+}
+
+.register__item>input{
+	border: 1px solid #000;
+	height: 70%;
+	width: 100%;
+	border-radius: 10px;
+	padding: 5px 10px;
+	font-size: 12px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.register__item>input:focus{
+	outline: none;
+}
+
+.positioned{
+	position: relative;
+	top: 0;
+	left: 0;
+}
+.register__item>img{
+	position: absolute;
+	top: 12px;
+	left: 88%;
+	width: 16px;
+	height: 16px;
+	cursor: pointer;
+}
+
+.forgot__password {
+	color: #83b8fc;
+	font-weight: 600;
+}
+.reminder {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	color: #83b8fc;
+	font-weight: 600;
+}
+
+.link{
+	color: #000;
+}
+
+.devdider {
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 700;
+	display: flex;
+	align-items: center;
+}
+
+.devdider::before,.devdider::after{
+	content: "";
+	display: inline-block;
+	width: 50%;
+	height: 2px;
+	background-color: #000;
+}
+
+.btn__box {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 10px;
+	height: 90px;
+}
+
+.btn__item {
+	background-color: #83b8fc;
+	padding: 10px 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+	flex: 1 1 auto;
+	border-radius: 10px;
+
+}
+
+.btn__link {
+	justify-self: center;
+	color: #000;
+	font-weight: 700;
 }
